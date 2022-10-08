@@ -1,0 +1,38 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.next {
+  background-image: url("./images/icon-angle-right.svg");
+}
+
+.prev {
+  background-image: url("./images/icon-angle-left.svg");
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  transition: all ease-in-out 500ms;
+}
+
+nav.activate {
+  left: 0;
+
+  @apply bg-white;
+}
+
+@media (min-width: 1024px) {
+  nav {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}

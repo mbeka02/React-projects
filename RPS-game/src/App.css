@@ -1,0 +1,373 @@
+body {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  /*background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;*/
+  margin: 2rem;
+}
+
+/*Card*/
+.App {
+  display: grid;
+  height: 70vh;
+}
+.card {
+  border: solid 1px grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Barlow Semi Condensed", "sans-serif";
+  padding: 1rem;
+  border-radius: 8px;
+  width: 35rem;
+  height: fit-content;
+  justify-self: center;
+  margin-bottom: 1rem;
+}
+.card--title {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin: 0;
+  color: white;
+}
+.card--section {
+  margin-right: 3rem;
+  text-align: left;
+}
+
+.counter {
+  background-color: white;
+  font-family: "Barlow Semi Condensed", "sans-serif";
+  text-align: center;
+  width: 8rem;
+  height: 6rem;
+  border-radius: 8px;
+  margin-left: 3rem;
+}
+.counter--label {
+  text-transform: uppercase;
+  color: #0f88da;
+  font-size: 1rem;
+}
+
+.counter--score {
+  font-size: 2rem;
+}
+
+.image-container {
+  background-image: url("./images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 21.5rem;
+  height: 23.5rem;
+
+  position: relative;
+  justify-self: center;
+  margin-top: 1rem;
+}
+.rock {
+  bottom: 0;
+  left: 32%;
+  background-color: white;
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: solid 16px hsl(349, 70%, 56%);
+  position: absolute;
+  background-image: url("./images/icon-rock.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.5) inset;
+}
+.scissors {
+  background-image: url("./images/icon-scissors.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: solid 16px hsl(40, 84%, 53%);
+  background-color: white;
+  box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.5) inset;
+}
+
+.paper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+
+  border-radius: 50%;
+  border: solid 16px hsl(230, 89%, 65%);
+  background-image: url("./images/icon-paper.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.5) inset;
+}
+
+/*Endgame screen*/
+.endgame {
+  display: flex;
+  place-self: center;
+  gap: 10rem;
+}
+.endgame--left {
+  display: grid;
+}
+.endgame--center {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+}
+.endgame--right {
+  display: grid;
+}
+.selected {
+  font-family: "Barlow Semi Condensed", "sans-serif";
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.results {
+  font-family: "Barlow Semi Condensed", "sans-serif";
+  font-size: 2.8rem;
+  color: white;
+  text-transform: uppercase;
+  justify-self: center;
+  margin: 0;
+}
+
+.reset-btn {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 14rem;
+  height: 3rem;
+  font-family: "Barlow Semi Condensed", "sans-serif";
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+.reset-btn:hover {
+  color: rgb(211, 14, 14);
+}
+
+.icon {
+  margin-top: 2rem;
+  width: 8rem;
+  height: 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.5) inset;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  animation: ripple 2s linear;
+}
+
+/*.icon::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+  opacity: 0;
+  animation: ripple infinite ease-out 1.5s;
+}*/
+/*.icon::before,
+.icon::after {
+  content: "";
+  border-radius: 50%;
+ animation: inherit;
+
+  animation-delay: 1s;
+  background-color: inherit;
+}*/
+.choice {
+  animation-delay: 6s;
+  animation-iteration-count: 5;
+}
+.house {
+  animation-iteration-count: 3;
+}
+
+.icon::after {
+  animation-delay: 2s;
+}
+
+.icon--Rock {
+  background-image: url("./images/icon-rock.svg");
+  border: solid 20px hsl(349, 70%, 56%);
+}
+.icon--Paper {
+  background-image: url("./images/icon-paper.svg");
+  border: solid 20px hsl(230, 89%, 65%);
+}
+
+.icon--Scissors {
+  background-image: url("./images/icon-scissors.svg");
+  border: solid 20px hsl(40, 84%, 53%);
+}
+
+/*Rules*/
+.footer {
+  display: flex;
+  justify-self: end;
+
+  height: fit-content;
+}
+
+.rules-btn {
+  font-family: "Barlow Semi Condensed", "sans-serif";
+  text-align: center;
+  font-size: 1.2rem;
+  width: 7rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 6px;
+  text-transform: uppercase;
+  border: solid 1px rgb(247, 243, 243);
+  color: rgb(247, 243, 243);
+}
+
+/*Backdrop*/
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.589);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+/*Modal*/
+.modal {
+  margin: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 20rem;
+  height: 25rem;
+  background-color: white;
+  background-image: url("./images/image-rules.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.modal-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-family: "Barlow Semi Condensed", "sans-serif";
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: hsl(229, 25%, 31%);
+}
+
+.close-icon {
+  background-image: url("./images/icon-close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  align-self: center;
+  width: 1rem;
+  height: 1rem;
+}
+
+/*@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}*/
+/*Ripple animation*/
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0.7rem rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 8rem rgba(255, 255, 255, 0);
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    margin: 0;
+  }
+  .App {
+    height: 100vh;
+    width: fit-content;
+    margin: 0;
+  }
+
+  .backdrop {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .footer {
+    justify-self: center;
+  }
+  .card {
+    width: 20rem;
+    margin: 2rem;
+  }
+  .endgame {
+    gap: 1.5rem;
+  }
+
+  .selected {
+    font-size: 1rem;
+  }
+  .results {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .reset-btn {
+    width: 8rem;
+    height: 2rem;
+
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+  .icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .icon--Rock {
+    border: solid 10px hsl(349, 70%, 56%);
+  }
+  .icon--Paper {
+    border: solid 10px hsl(230, 89%, 65%);
+  }
+
+  .icon--Scissors {
+    border: solid 10px hsl(40, 84%, 53%);
+  }
+  .selected {
+    margin-left: 0.5rem;
+  }
+}
