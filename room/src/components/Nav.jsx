@@ -31,7 +31,7 @@ const Nav = () => {
             className={
               open
                 ? "flex justify-end mr-6   gap-6  font-semibold"
-                : "flex  gap-6 font-semibold cursor-pointer"
+                : "flex  gap-6 font-semibold cursor-pointer" 
             }
           >
             <li className="hover:underline underline-offset-8 decoration-2">
