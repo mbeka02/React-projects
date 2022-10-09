@@ -80,9 +80,9 @@ const Slider = () => {
               </div>
             </div>
             <div className="p-8 xl:p-16">
-              <h1 className=" text-slate-900 text-3xl lg:text-5xl font-semibold">
+              <h2 className=" text-slate-900 text-3xl lg:text-5xl font-semibold">
                 {item.title}
-              </h1>
+              </h2>
               <p className="text-slate-900 opacity-75 my-6">{item.desc}</p>
               <div className="flex gap-8">
                 <span
