@@ -2,7 +2,7 @@ import light from "../images/image-about-light.jpg";
 import dark from "../images/image-about-dark.jpg";
 export default function Footer() {
   return (
-    <footer className="grid  lg:grid-cols-2 lg:mt-6  xl:grid-cols-3 xl:mt-0">
+    <footer className="grid  lg:grid-cols-2 lg:mt-6  xl:grid-cols-3 xl:mt-0 ">
       <div>
         <img src={dark} alt="dark" className="w-full" />
       </div>
