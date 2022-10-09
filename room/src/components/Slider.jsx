@@ -1,3 +1,4 @@
+//IMPORTS
 import { useState } from "react";
 import arrow from "../images/icon-arrow.svg";
 import desktop from "../images/desktop-image-hero-1.jpg";
@@ -17,7 +18,7 @@ const data = [
   },
   {
     id: 2,
-    title: "We are available all across the globe",
+    title: "We are available all  across the globe",
     desc: "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.",
     mobile: mobile2,
     desktop: desktop2,
@@ -32,9 +33,10 @@ const data = [
 ];
 
 const Slider = () => {
+  //STATE
   const [items, setItems] = useState(data);
   const [slide, setSlide] = useState(1);
-
+  //FUNCTIONS
   function next() {
     if (slide !== items.length) {
       setSlide((prev) => prev + 1);

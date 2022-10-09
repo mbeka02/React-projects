@@ -51,9 +51,6 @@ function App() {
     setChoice("");
   };
 
-  /*const open = () => {
-    setModalOpen(true);
-  };*/
   const close = () => {
     setModalOpen(false);
   };

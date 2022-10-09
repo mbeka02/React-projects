@@ -19,7 +19,7 @@
 nav {
   position: absolute;
   top: 0;
-  left: -100vw;
+  left: -200vw;
   transition: all ease-in-out 500ms;
 }
 

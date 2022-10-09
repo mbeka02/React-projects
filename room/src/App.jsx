@@ -1,3 +1,4 @@
+//COMPONENTS
 import Nav from "./components/Nav";
 import Slider from "./components/Slider";
 import Footer from "./components/Footer";
